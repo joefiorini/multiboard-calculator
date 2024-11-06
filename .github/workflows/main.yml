@@ -5,22 +5,27 @@ on:
     inputs:
       app1:
         description: "Deploy App 1"
+        type: boolean
         required: false
         default: "false"
       app2:
         description: "Deploy App 2"
+        type: boolean
         required: false
         default: "false"
       app3:
         description: "Deploy App 3"
+        type: boolean
         required: false
         default: "false"
       app4:
         description: "Deploy App 4"
+        type: boolean
         required: false
         default: "false"
       app5:
         description: "Deploy App 5"
+        type: boolean
         required: false
         default: "false"
 
