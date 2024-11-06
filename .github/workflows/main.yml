@@ -1,0 +1,62 @@
+name: Deploy Frontend Apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      app1:
+        description: "Deploy App 1"
+        required: false
+        default: "false"
+      app2:
+        description: "Deploy App 2"
+        required: false
+        default: "false"
+      app3:
+        description: "Deploy App 3"
+        required: false
+        default: "false"
+      app4:
+        description: "Deploy App 4"
+        required: false
+        default: "false"
+      app5:
+        description: "Deploy App 5"
+        required: false
+        default: "false"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy App 1
+        if: ${{ github.event.inputs.app1 == 'true' }}
+        run: |
+          echo "Deploying App 1..."
+          # Add your deployment script for App 1 here
+
+      - name: Deploy App 2
+        if: ${{ github.event.inputs.app2 == 'true' }}
+        run: |
+          echo "Deploying App 2..."
+          # Add your deployment script for App 2 here
+
+      - name: Deploy App 3
+        if: ${{ github.event.inputs.app3 == 'true' }}
+        run: |
+          echo "Deploying App 3..."
+          # Add your deployment script for App 3 here
+
+      - name: Deploy App 4
+        if: ${{ github.event.inputs.app4 == 'true' }}
+        run: |
+          echo "Deploying App 4..."
+          # Add your deployment script for App 4 here
+
+      - name: Deploy App 5
+        if: ${{ github.event.inputs.app5 == 'true' }}
+        run: |
+          echo "Deploying App 5..."
+          # Add your deployment script for App 5 here
